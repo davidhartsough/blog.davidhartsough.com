@@ -1,6 +1,6 @@
-import React from 'react'
-import Helmet from 'react-helmet'
-import Link from 'gatsby-link'
+import React from 'react';
+import Helmet from 'react-helmet';
+import Link from 'gatsby-link';
 
 const HelmetHead = () => (
   <Helmet>
@@ -31,7 +31,7 @@ const HelmetHead = () => (
     <meta property="og:url" content="http://blog.davidhartsough.com/" />
     <meta property="og:type" content="website" />
   </Helmet>
-)
+);
 
 const YearEssayList = ({ year }) => {
   return (
@@ -45,32 +45,32 @@ const YearEssayList = ({ year }) => {
         ))}
       </ul>
     </div>
-  )
-}
+  );
+};
 
 export default ({ data }) => {
-  const nodes = data.allMarkdownRemark.edges
+  const nodes = data.allMarkdownRemark.edges;
   const years = Array.from(
     new Set(nodes.map(({ node }) => node.frontmatter.date))
   ).map(year => {
     return {
       year,
       essays: [],
-    }
-  })
+    };
+  });
   nodes.forEach(({ node }) => {
     const yearIndex = years.findIndex(
       year => year.year === node.frontmatter.date
-    )
-    years[yearIndex].essays.push(node)
-  })
+    );
+    years[yearIndex].essays.push(node);
+  });
   return (
     <section>
       <HelmetHead />
       {years.map(year => <YearEssayList year={year} key={year.year} />)}
     </section>
-  )
-}
+  );
+};
 
 export const query = graphql`
   query IndexQuery {
@@ -89,4 +89,4 @@ export const query = graphql`
       }
     }
   }
-`
+`;

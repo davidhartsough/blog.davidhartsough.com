@@ -1,8 +1,8 @@
-import React from 'react'
-import Helmet from 'react-helmet'
-import Link from 'gatsby-link'
+import React from 'react';
+import Helmet from 'react-helmet';
+import Link from 'gatsby-link';
 
-import './index.css'
+import './index.css';
 
 const HelmetHead = () => (
   <Helmet>
@@ -41,7 +41,7 @@ const HelmetHead = () => (
     <meta name="msapplication-TileImage" content="/mstile-144x144.png" />
     <meta name="msapplication-navbutton-color" content="#198BED" />
   </Helmet>
-)
+);
 
 export default ({ location, children }) => (
   <div>
@@ -64,4 +64,4 @@ export default ({ location, children }) => (
     </nav>
     <main>{children()}</main>
   </div>
-)
+);

@@ -1,8 +1,8 @@
-import React from 'react'
-import Helmet from 'react-helmet'
+import React from 'react';
+import Helmet from 'react-helmet';
 
 export default ({ data }) => {
-  const essay = data.markdownRemark
+  const essay = data.markdownRemark;
   return (
     <section>
       <Helmet>
@@ -56,8 +56,8 @@ export default ({ data }) => {
       </header>
       <div dangerouslySetInnerHTML={{ __html: essay.html }} />
     </section>
-  )
-}
+  );
+};
 
 export const query = graphql`
   query EssayBySlug($slug: String!) {
@@ -74,4 +74,4 @@ export const query = graphql`
       }
     }
   }
-`
+`;

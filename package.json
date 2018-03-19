@@ -1,8 +1,13 @@
 {
-  "name": "gatsby-starter-simple-blog",
-  "description": "Gatsby simple blog starter",
+  "name": "blog.davidhartsough.com",
+  "description": "Personal writings, thoughts, essays, notes, documents, and ramblings.",
   "version": "1.0.0",
   "author": "David Hartsough <hartsoughdavid@gmail.com>",
+  "homepage": "http://blog.davidhartsough.com",
+  "repository": {
+    "type" : "git",
+    "url" : "https://github.com/davidhartsough/blog.davidhartsough.com.git"
+  },
   "dependencies": {
     "gatsby": "^1.9.236",
     "gatsby-link": "^1.6.39",
